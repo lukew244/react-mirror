@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Clock from './clock.es6.jsx'
+import TubeStatus from './tubeStatus.es6.jsx'
+
 
 class App extends Component {
   render() {
@@ -10,6 +12,7 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Clock />
+          <TubeStatus />
         </div>
       </div>
     );
