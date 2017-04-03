@@ -32,7 +32,6 @@ class TubeLine extends Component {
     return (tubeLineColours[line]);
   }
 
-
   render() {
     var style = {
       background: this.tubeLineColour(this.state.lineData.id),

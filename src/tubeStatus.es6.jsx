@@ -44,24 +44,21 @@ class TubeStatus extends Component {
 
   render() {
     return (
-      <div>
-        <h2>Tube status:</h2>
-        <div>
-          <table className="">
-            <thead>
-              <tr>
-                <th>Line</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {this.state.statuses.map((line, index) => (
-                <TubeLine lineData={line} key={index} />
-              ))}
-            </tbody>
-          </table>
-          <small>Last updated: {this.state.updated_at}</small>
-        </div>
+      <div className="tube-status-box">
+        <table className="">
+          <thead>
+            <tr>
+              <th>Line</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.statuses.map((line, index) => (
+              <TubeLine lineData={line} key={index} />
+            ))}
+          </tbody>
+        </table>
+        <small className="tube-updated-at">Last updated: {this.state.updated_at}</small>
       </div>
     );
   }
