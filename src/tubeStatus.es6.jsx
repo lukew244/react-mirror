@@ -11,6 +11,7 @@ class TubeStatus extends Component {
 
     this.state = {
       statuses: [],
+      updated_at: null,
       api_url: API_URL + "?&app_id=" + APP_ID + "&app_key=" + APP_KEY
     };
 
@@ -36,7 +37,8 @@ class TubeStatus extends Component {
 
   updateState(statuses) {
     this.setState({
-      statuses: statuses
+      statuses: statuses,
+      updated_at: new Date().toLocaleTimeString()
     })
   }
 
@@ -45,9 +47,20 @@ class TubeStatus extends Component {
       <div>
         <h2>Tube status:</h2>
         <div>
-          {this.state.statuses.map((line, index) => (
+          <table className="">
+            <thead>
+              <tr>
+                <th>Line</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.state.statuses.map((line, index) => (
                 <TubeLine lineData={line} key={index} />
               ))}
+            </tbody>
+          </table>
+          <small>Last updated: {this.state.updated_at}</small>
         </div>
       </div>
     );
