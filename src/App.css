@@ -21,6 +21,18 @@
   text-align: center;
 }
 
+.weather-widget {
+  margin: 25px 0;
+}
+
+.tube-status-widget {}
+
+.tube-updated-at {
+  text-align: left;
+}
+
+
+
 td {
   text-align: left;
   text-transform:capitalize;

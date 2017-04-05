@@ -44,7 +44,7 @@ class TubeStatus extends Component {
 
   render() {
     return (
-      <div className="tube-status-box">
+      <div className="tube-status-widget">
         <table className="">
           <thead>
             <tr>
@@ -58,7 +58,9 @@ class TubeStatus extends Component {
             ))}
           </tbody>
         </table>
-        <small className="tube-updated-at">Last updated: {this.state.updated_at}</small>
+        <div className="tube-updated-at">
+          <small >Last updated: {this.state.updated_at}</small>
+        </div>
       </div>
     );
   }
