@@ -50,11 +50,8 @@ class Weather extends Component {
     if (this.state.weather) {
       return (
         <div className="weather-widget">
-          {this.weatherIcon()}
-          <br />
+          {this.weatherIcon()}<br />
           {this.state.weather.weather[0].description}, {this.state.weather.main.temp}&deg;C
-          <br />
-
         </div>
       );
     } else {
